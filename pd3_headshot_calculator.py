@@ -3,7 +3,7 @@ enemies = [
     #[hp, armour, armourThreshold, Name]
     (150, 70, 0.5, "Light Swat"),
     (150, 170, 0.5, "Heavy Swat"),
-    (150, 140, 0.5, "Taser/Nader"),
+    (150, 140, 0.5, "Specials"),
     (150, 0, 0, "Cloaker"),
     (160, 180, 1, "Shield")
     ]
