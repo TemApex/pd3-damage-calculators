@@ -1,11 +1,12 @@
 #Define enemy data
 enemies = [
     #[hp, armour, armourThreshold, Name]
-    (150, 70, 0.5, "Light Swat"),
-    (150, 170, 0.5, "Heavy Swat"),
-    (150, 140, 0.5, "Specials"),
+    (150, 70, 1.5, "Light Swat"),
+    (150, 170, 1.5, "Heavy Swat"),
+    (150, 140, 1.5, "Specials"),
+    (50, 150, 2, "Drone"),
     (150, 0, 0, "Cloaker"),
-    (160, 180, 1, "Shield")
+    (160, 180, 2, "Shield")
     ]
 
 
@@ -27,7 +28,7 @@ def damageCalc(shots, HP, AP, APMult, damage, critMult):
 def NoEdge(HP, AP, APThreshold, enemy):
     
     shots = 0
-    APMult = APen - APThreshold
+    APMult = 1 - APThreshold + APen
     APMult = max([0, APMult])
 
     shots = damageCalc(shots, HP, AP, APMult, damage, critMult)
@@ -37,7 +38,7 @@ def NoEdge(HP, AP, APThreshold, enemy):
 def Edge(HP, AP, APThreshold, enemy):
     
     shots = 0
-    APMult = APen - APThreshold
+    APMult = 1 - APThreshold + APen
     APMult = max([0, APMult])
         
     shots = damageCalc(shots, HP, AP, APMult, damage * 1.1, critMult)
@@ -46,7 +47,7 @@ def Edge(HP, AP, APThreshold, enemy):
 
 def FaceToFace(HP, AP, APThreshold, enemy):
     shots = 0
-    APMult = APen - APThreshold
+    APMult = 1 - APThreshold + APen
     APMult = max([0, APMult])
     
     shots = damageCalc(shots, HP, AP, APMult, damage * 1.3, critMult)
@@ -55,7 +56,7 @@ def FaceToFace(HP, AP, APThreshold, enemy):
 
 def CuttingShot(HP, AP, APThreshold, enemy):
     shots = 0
-    APMult = APen - APThreshold + 0.1
+    APMult = 1 - APThreshold + APen + 0.1
     APMult = max([0, APMult])
     
     shots = damageCalc(shots, HP, AP, APMult, damage * 1.1, critMult)
@@ -64,7 +65,7 @@ def CuttingShot(HP, AP, APThreshold, enemy):
 
 def CuttingFace(HP, AP, APThreshold, enemy):
     shots = 0
-    APMult = APen - APThreshold + 0.1
+    APMult = 1 - APThreshold + APen + 0.1
     APMult = max([0, APMult])
     
     shots = damageCalc(shots, HP, AP, APMult, damage * 1.3, critMult)
