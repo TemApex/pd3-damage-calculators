@@ -4,6 +4,7 @@ enemies = [
     (150, 70, 1.5, "Light Swat"),
     (150, 170, 1.5, "Heavy Swat"),
     (150, 140, 1.5, "Specials"),
+    (50, 150, 2, "Drone"),
     (150, 0, 0, "Cloaker"),
     (160, 180, 2, "Shield")
     ]
