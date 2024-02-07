@@ -9,7 +9,6 @@ enemies = [
     (160, 180, 2, "Shield")
     ]
 
-
 # Functions
 def damageCalc(shots, HP, AP, APMult, damage, critMult):
     while True:
@@ -26,7 +25,6 @@ def damageCalc(shots, HP, AP, APMult, damage, critMult):
     return shots
         
 def NoEdge(HP, AP, APThreshold, enemy):
-    
     shots = 0
     APMult = 1 - APThreshold + APen
     APMult = max([0, APMult])
@@ -36,7 +34,6 @@ def NoEdge(HP, AP, APThreshold, enemy):
     print ("{} killed without Edge in {} shots.".format(enemy,shots))
 
 def Edge(HP, AP, APThreshold, enemy):
-    
     shots = 0
     APMult = 1 - APThreshold + APen
     APMult = max([0, APMult])
@@ -75,7 +72,6 @@ def CuttingFace(HP, AP, APThreshold, enemy):
 while True:
     print("-----------------------------------------")
     try:
-        
         #Gather weapon data
         damage = float(input('Weapon damage: '))
         critMult = float(input('Crit multiplier: '))
