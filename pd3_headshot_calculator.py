@@ -56,7 +56,6 @@ def CuttingShot(HP, AP, APThreshold, enemy):
 while True:
     print("-----------------------------------------")
     try:
-        
         #Gather weapon data
         damage = float(input('Weapon damage: '))
         critMult = float(input('Crit multiplier: '))
