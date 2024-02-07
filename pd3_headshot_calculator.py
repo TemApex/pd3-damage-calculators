@@ -25,7 +25,6 @@ def damageCalc(shots, HP, AP, APMult, damage, critMult):
     return shots
         
 def NoEdge(HP, AP, APThreshold, enemy):
-    
     shots = 0
     APMult = 1 - APThreshold + APen
     APMult = max([0, APMult])
@@ -35,7 +34,6 @@ def NoEdge(HP, AP, APThreshold, enemy):
     print ("{} killed without Edge in {} shots.".format(enemy,shots))
 
 def Edge(HP, AP, APThreshold, enemy):
-    
     shots = 0
     APMult = 1 - APThreshold + APen
     APMult = max([0, APMult])
