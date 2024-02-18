@@ -1,12 +1,14 @@
 #Define enemy data
 enemies = [
-    #[hp, armour, armourHardness, Name]
+    #[HP, Armor, ArmorHardness, Name]
     (150, 70, 1.5, "Light Swat"),
     (150, 170, 1.5, "Heavy Swat"),
     (150, 140, 1.5, "Specials"),
     (50, 150, 2, "Drone"),
-    (150, 0, 0, "Cloaker"),
-    (160, 180, 2, "Shield")
+    (150, 0, 1, "Cloaker"),
+    (160, 180, 2, "Shield"),
+    (850, 0, 4, "Dozer Visor"),
+    (200, 0, 4, "Dozer (Visor Broken)")
     ]
 
 # Functions
@@ -25,6 +27,7 @@ def damageCalc(shots, HP, AP, APMult, damage, critMult):
     return shots
         
 def NoEdge(HP, AP, APThreshold, enemy):
+    
     shots = 0
     APMult = 1 - APThreshold + APen
     APMult = max([0, APMult])
@@ -34,6 +37,7 @@ def NoEdge(HP, AP, APThreshold, enemy):
     print ("{} killed without Edge in {} shots.".format(enemy,shots))
 
 def Edge(HP, AP, APThreshold, enemy):
+    
     shots = 0
     APMult = 1 - APThreshold + APen
     APMult = max([0, APMult])
@@ -54,6 +58,7 @@ def CuttingShot(HP, AP, APThreshold, enemy):
 while True:
     print("-----------------------------------------")
     try:
+        
         #Gather weapon data
         damage = float(input('Weapon damage: '))
         critMult = float(input('Crit multiplier: '))
