@@ -5,8 +5,10 @@ enemies = [
     (150, 170, 1.5, "Heavy Swat"),
     (150, 140, 1.5, "Specials"),
     (50, 150, 2, "Drone"),
-    (150, 0, 0, "Cloaker"),
-    (160, 180, 2, "Shield")
+    (150, 0, 1, "Cloaker"),
+    (160, 180, 2, "Shield"),
+    (850, 0, 4, "Dozer Visor"),
+    (200, 0, 4, "Dozer (Visor Broken)")
     ]
 
 # Functions
